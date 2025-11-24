@@ -1,0 +1,376 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <title>Huy Đức &amp; Lan Anh</title>
+  <!-- Viewport để mobile nhận đúng chiều rộng -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Pre:wght@400..700&family=Edu+SA+Hand:wght@400..700&family=Handlee&family=Great+Vibes&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <!-- CSS riêng -->
+  <link rel="stylesheet" href="/CSS/style.css">
+</head>
+<body>
+  <!-- Nhạc: để file mp3 cùng thư mục hoặc chỉnh lại path -->
+  <audio id="bg-music" src="Until I Found You.mp3" loop></audio>
+  <!-- INTRO OVERLAY -->
+  <div id="intro-overlay">
+    <div class="intro-card reveal">
+      <p class="intro-eyebrow">You are invited to</p>
+      <h1 class="intro-title">Our Wedding</h1>
+      <p class="intro-subtitle">Nhấn vào phong bì để bước vào thiệp cưới</p>
+      <div id="open-window" class="intro-envelope">
+        <div class="envelope-shadow"></div>
+        <div class="envelope-body">
+          <div class="envelope-back"></div>
+          <div class="envelope-front"></div>
+          <div class="envelope-flap"></div>
+          <div class="envelope-seal"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- MAIN CONTENT -->
+  <div id="main-content">
+    <div class="page-frame reveal">
+      <div class="main-card reveal">
+        <div class="main-inner">
+          <!-- PT1 -->
+          <div id="pt1" class="reveal">
+            <div class="pt1-floating-decor">
+              <span class="floating-flower f1"></span>
+              <span class="floating-flower f2"></span>
+              <span class="floating-flower f3"></span>
+              <span class="floating-flower f4"></span>
+              <span class="floating-flower f5"></span>
+              <span class="floating-flower f6"></span>
+              <span class="floating-flower f7"></span>
+              <span class="floating-flower f8"></span>
+            </div>
+            <div class="pt1-frame">
+              <div class="pt1-content">
+                <div class="pt1-content-left">
+                  <p class="pt1-eyebrow">Wedding Invitation</p>
+                  <h1 class="pt1-title">Our Wedding</h1>
+                  <h2 class="pt1-names">Huy Đức &amp; Lan Anh</h2>
+                  <p class="pt1-line">Trân trọng kính mời</p>
+                  <p class="pt1-subtitle">
+                    Rất mong được đón tiếp bạn trong ngày trọng đại, cùng lưu giữ những khoảnh khắc hạnh phúc.
+                  </p>
+                </div>
+                <div class="pt1-content-right">
+                  <div class="pt1-open-above">
+                    CHẠM ĐỂ MỞ THIỆP
+                  </div>
+                  <!-- Hai chiếc thiệp nhỏ -->
+                  <div class="small-thieps">
+                      <img class="small-thiep" src="images/thiep.jpg" data-full="images/img19.jpg" alt="Thiệp nhỏ 1">
+                      <img class="small-thiep" src="images/thiep.jpg" data-full="images/img20.jpg" alt="Thiệp nhỏ 2">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- PT2 -->
+          <div id="pt2" class="reveal">
+            <div class="container">
+              <div class="pt2-block pt2-text-block text-center reveal">
+                <p class="eyebrow-text">Save the Date</p>
+                <h2 class="section-title">
+                  Huy Đức &amp; Lan Anh Wedding Celebration
+                </h2>
+                <div class="pt2-divider"></div>
+                <p class="pt2-date-text">
+                  14.12.2025 &nbsp;
+                </p>
+                <p class="section-text section-text-center">
+                  Chúng mình rất hạnh phúc khi được chia sẻ ngày đặc biệt này cùng bạn.
+                  Hy vọng bạn sẽ sắp xếp thời gian để đến chung vui và lưu lại thật nhiều kỷ niệm đẹp.
+                </p>
+                <div class="countdown-card reveal">
+                  <div class="countdown-inner">
+                    <div class="countdown-title">Đếm ngược đến đám cưới của chúng mình</div>
+                    <div class="countdown-row">
+                      <div class="countdown-item">
+                        <div id="cd-days" class="countdown-number">0</div>
+                        <div class="countdown-label">Ngày</div>
+                      </div>
+                      <div class="countdown-item">
+                        <div id="cd-hours" class="countdown-number">0</div>
+                        <div class="countdown-label">Giờ</div>
+                      </div>
+                      <div class="countdown-item">
+                        <div id="cd-mins" class="countdown-number">0</div>
+                        <div class="countdown-label">Phút</div>
+                      </div>
+                      <div class="countdown-item">
+                        <div id="cd-secs" class="countdown-number">0</div>
+                        <div class="countdown-label">Giây</div>
+                      </div>
+                    </div>
+                    <div id="countdown-expired-text" class="countdown-expired" style="display:none;">
+                      Thời gian xác nhận đã kết thúc rồi. Hẹn gặp bạn trong ngày đặc biệt nhé!
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- ĐỊA ĐIỂM TỔ CHỨC -->
+              <div class="pt2-block pt2-map-block reveal">
+                <h3 class="pt2-subtitle text-center">Địa điểm tổ chức</h3>
+                <p class="pt2-subtext text-center">
+                  Hai địa điểm chính cho buổi tiệc cưới. Bạn có thể bấm “Chỉ đường” để xem lộ trình chi tiết.
+                </p>
+                <div class="venue-cards">
+                  <!-- Nhà cô dâu -->
+                  <div class="venue-card">
+                    <div class="venue-header">
+                      <div class="venue-arc">
+                        <span class="venue-main-title">Nhà Cô Dâu</span>
+                      </div>
+                      <div class="venue-subtitle">Địa chỉ tiệc cưới cô dâu</div>
+                    </div>
+                    <div class="venue-body">
+                      <h4 class="venue-name">Thôn Tháp</h4>
+                      <p class="venue-address">
+                        Thôn Tháp, Liêm Túc, Thanh Liêm, Hà Nam
+                      </p>
+                      <a class="venue-button" target="_blank"
+                         href="https://maps.app.goo.gl/ds877bXStzMV44Pv6">
+                        Chỉ đường
+                      </a>
+                      <div class="venue-time-row">
+                        <div class="time-col">
+                          <div class="time-main">10h00</div>
+                        </div>
+                        <div class="time-col">
+                          <div class="time-main">14.12.2025</div>
+                        </div>
+                        <div class="time-col">
+                          <div class="time-main">Chủ Nhật</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Nhà chú rể -->
+                  <div class="venue-card">
+                    <div class="venue-header">
+                      <div class="venue-arc">
+                        <span class="venue-main-title">Nhà Chú Rể</span>
+                      </div>
+                      <div class="venue-subtitle">Địa chỉ tiệc cưới chú rể</div>
+                    </div>
+                    <div class="venue-body">
+                      <h4 class="venue-name">Thôn Tháp</h4>
+                      <p class="venue-address">
+                        Thôn Tháp, Liêm Túc, Thanh Liêm, Hà Nam
+                      </p>
+                      <a class="venue-button" target="_blank"
+                         href="https://www.google.com/maps">
+                        Chỉ đường
+                      </a>
+                      <div class="venue-time-row">
+                        <div class="time-col">
+                          <div class="time-main">7h00</div>
+                        </div>
+                        <div class="time-col">
+                          <div class="time-main">14.12.2025</div>
+                        </div>
+                        <div class="time-col">
+                          <div class="time-main">Chủ Nhật</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- LỊCH CƯỚI -->
+              <div class="pt2-block pt2-calendar-block reveal">
+                <h3 class="pt2-subtitle text-center">Lịch cưới</h3>
+                <p class="pt2-subtext text-center">
+                  Đánh dấu lại ngày đặc biệt để không bỏ lỡ khoảnh khắc quan trọng.
+                </p>
+                <div class="pt2-calendar-wrapper">
+                  <div class="pt2-image-card">
+                    <img src="images/lich.png" alt="Lịch cưới">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- PT3: GỬI QUÀ MỪNG -->
+          <div id="pt3" class="reveal">
+            <div class="container">
+              <div class="pt3-card text-center reveal">
+                <p class="eyebrow-text">Gift for the Couple</p>
+                <h2 class="section-title">
+                  Gửi quà mừng tới Cô Dâu – Chú Rể
+                </h2>
+                <div class="pt3-divider"></div>
+                <p class="section-text section-text-center">
+                  Nếu bạn muốn gửi lời chúc và một món quà nhỏ đến cô dâu – chú rể,
+                  bạn có thể sử dụng mã QR bên dưới. Sự hiện diện của bạn đã là món quà ý nghĩa nhất rồi!
+                </p>
+                <div class="gift-box-wrapper">
+                  <div id="gift-box" class="gift-icon">
+                    <span class="ribbon-vertical"></span>
+                    <span class="ribbon-horizontal"></span>
+                    <span class="heart"></span>
+                  </div>
+                  <p class="gift-hint">Nhấn vào hộp quà để xem mã QR</p>
+                </div>
+                <div id="gift-qr" class="pt3-qr">
+                  <div class="pt3-image-wrapper">
+                    <img src="https://api.qrserver.com/v1/create-qr-code/?size=220x220&data=Bride" alt="QR cô dâu">
+                  </div>
+                  <div class="pt3-image-wrapper">
+                    <img src="https://api.qrserver.com/v1/create-qr-code/?size=220x220&data=Groom" alt="QR chú rể">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- PT4 -->
+          <div id="pt4-father" class="reveal">
+            <div class="pt4-1">
+              <div class="vertical-marquee">
+                <img src="images/img11.jpg" alt="Ảnh dọc bên trái">
+              </div>
+            </div>
+            <div id="center-wrap">
+              <div id="pt4">
+                <div class="marquee">
+                  <img src="images/img3.png" alt="Ảnh 3">
+                  <img src="images/img4.png" alt="Ảnh 4">
+                  <img src="images/img5.png" alt="Ảnh 5">
+                  <img src="images/img6.png" alt="Ảnh 6">
+                </div>
+              </div>
+            </div>
+            <div class="pt4-2">
+              <div class="vertical-marquee">
+                <img src="images/img12.jpg" alt="Ảnh dọc bên phải">
+              </div>
+            </div>
+          </div>
+        </div><!-- /.main-inner -->
+      </div><!-- /.main-card -->
+    </div><!-- /.page-frame -->
+  </div><!-- /#main-content -->
+
+  <!-- Modal cho hình ảnh lớn -->
+  <div id="image-modal" class="modal">
+    <span id="close-modal" class="close">&times;</span>
+    <img class="modal-content" id="modal-image" src="images/img10.jpg" alt="Hình ảnh lớn">
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const overlay = document.getElementById('intro-overlay');
+      const openWindow = document.getElementById('open-window');
+      const bgMusic = document.getElementById('bg-music');
+      if (overlay && openWindow) {
+        openWindow.addEventListener('click', function () {
+          openWindow.classList.add('clicked');
+          document.body.classList.add('show-main');
+          // Phát nhạc sau khi người dùng click
+          if (bgMusic) {
+            bgMusic.play().catch(err => {
+              console.log('Cannot play audio:', err);
+            });
+          }
+          setTimeout(() => {
+            overlay.classList.add('opened');
+          }, 200);
+          setTimeout(() => {
+            overlay.style.display = 'none';
+          }, 1400);
+        });
+      }
+      /* COUNTDOWN */
+      const daysEl = document.getElementById('cd-days');
+      const hoursEl = document.getElementById('cd-hours');
+      const minsEl = document.getElementById('cd-mins');
+      const secsEl = document.getElementById('cd-secs');
+      const expiredText = document.getElementById('countdown-expired-text');
+      const targetDate = new Date('2025-12-14T07:00:00');
+      function updateCountdown() {
+        const now = new Date();
+        const diff = targetDate - now;
+        if (diff <= 0) {
+          daysEl.textContent = '0';
+          hoursEl.textContent = '00';
+          minsEl.textContent = '00';
+          secsEl.textContent = '00';
+          if (expiredText) expiredText.style.display = 'block';
+          return;
+        }
+        const totalSeconds = Math.floor(diff / 1000);
+        const days = Math.floor(totalSeconds / (24 * 3600));
+        const hours = Math.floor((totalSeconds % (24 * 3600)) / 3600);
+        const mins = Math.floor((totalSeconds % 3600) / 60);
+        const secs = totalSeconds % 60;
+        daysEl.textContent = days;
+        hoursEl.textContent = hours.toString().padStart(2, '0');
+        minsEl.textContent = mins.toString().padStart(2, '0');
+        secsEl.textContent = secs.toString().padStart(2, '0');
+      }
+      updateCountdown();
+      setInterval(updateCountdown, 1000);
+      /* Gift box toggle */
+      const giftBox = document.getElementById('gift-box');
+      const giftQr = document.getElementById('gift-qr');
+      if (giftBox && giftQr) {
+        giftQr.classList.remove('show');
+        giftBox.addEventListener('click', () => {
+          giftQr.classList.toggle('show');
+        });
+      }
+      /* Nhân đôi ảnh marquee cho PT4 – chạy sau khi DOM ready và tránh nhân đôi nhiều lần */
+      document.querySelectorAll('.marquee').forEach(mq => {
+        if (!mq.dataset.cloned) {
+          mq.innerHTML = mq.innerHTML + mq.innerHTML;
+          mq.dataset.cloned = 'true';
+        }
+      });
+      /* Modal cho small thieps */
+      const smallThieps = document.querySelectorAll('.small-thiep');
+      const modal = document.getElementById('image-modal');
+      const closeModal = document.getElementById('close-modal');
+      if (modal && closeModal) {
+        smallThieps.forEach(thiep => {
+  thiep.addEventListener('click', () => {
+    const fullImg = thiep.dataset.full || thiep.src; 
+    document.getElementById('modal-image').src = fullImg;
+    modal.style.display = 'block';
+  });
+});
+        closeModal.addEventListener('click', () => {
+          modal.style.display = 'none';
+        });
+        window.addEventListener('click', (event) => {
+          if (event.target === modal) {
+            modal.style.display = 'none';
+          }
+        });
+      }
+    });
+    /* Reveal khi scroll */
+    const reveals = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    reveals.forEach(reveal => observer.observe(reveal));
+  </script>
+</body>
+</html>
